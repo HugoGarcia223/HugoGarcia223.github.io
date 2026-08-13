@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hugo García Núñez — Credenciales</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0E2A4A;
+    --navy-soft: #274B6E;
+    --bg: #F3F5F8;
+    --card: #FFFFFF;
+    --steel: #3E6B96;
+    --muted: #6B7280;
+    --line: #E2E6EC;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--navy);
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 64px 24px 40px;
+  }
+
+  main {
+    width: 100%;
+    max-width: 680px;
+  }
+
+  header {
+    margin-bottom: 48px;
+  }
+
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--steel);
+    margin: 0 0 14px;
+  }
+
+  h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: clamp(32px, 5vw, 42px);
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+    margin: 0 0 10px;
+  }
+
+  header p.sub {
+    font-size: 15px;
+    color: var(--muted);
+    margin: 0;
+    line-height: 1.5;
+    max-width: 46ch;
+  }
+
+  .section-label {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--navy-soft);
+    margin: 0 0 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .cert-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 40px;
+  }
+
+  .cert-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 22px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .cert-card:hover, .cert-card:focus-visible {
+    border-color: var(--steel);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(14, 42, 74, 0.08);
+    outline: none;
+  }
+
+  .cert-card:focus-visible {
+    outline: 2px solid var(--steel);
+    outline-offset: 2px;
+  }
+
+  .cert-main {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .cert-org {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .cert-name {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    color: var(--navy);
+  }
+
+  .cert-date {
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  .cert-action {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--steel);
+    white-space: nowrap;
+  }
+
+  .cert-action svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  footer {
+    margin-top: auto;
+    padding-top: 32px;
+    font-size: 12px;
+    color: var(--muted);
+    text-align: center;
+  }
+
+  footer a {
+    color: var(--steel);
+    text-decoration: none;
+  }
+
+  @media (max-width: 480px) {
+    .cert-card {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .cert-action {
+      align-self: flex-end;
+    }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <p class="eyebrow">Verificación de credenciales</p>
+    <h1>Hugo García Núñez</h1>
+    <p class="sub">Estudiante de Seguridad Informática, ITLA. Esta página reúne certificados que no cuentan con verificación pública propia — cada enlace abre el documento original.</p>
+  </header>
+
+  <p class="section-label">Palo Alto Networks</p>
+  <div class="cert-list">
+    <a class="cert-card" href="./palo-alto-practitioner.pdf" target="_blank" rel="noopener">
+      <div class="cert-main">
+        <span class="cert-org">Palo Alto Networks Beacon</span>
+        <span class="cert-name">Cybersecurity Practitioner</span>
+        <span class="cert-date">Emitido — Jun 2026</span>
+      </div>
+      <span class="cert-action">
+        Ver PDF
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+      </span>
+    </a>
+
+    <a class="cert-card" href="./palo-alto-apprentice.pdf" target="_blank" rel="noopener">
+      <div class="cert-main">
+        <span class="cert-org">Palo Alto Networks Beacon</span>
+        <span class="cert-name">Cybersecurity Apprentice</span>
+        <span class="cert-date">Emitido — Jun 2026</span>
+      </div>
+      <span class="cert-action">
+        Ver PDF
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+      </span>
+    </a>
+  </div>
+
+  <footer>
+    Certificaciones adicionales verificables en <a href="https://www.credly.com" target="_blank" rel="noopener">Credly</a> y el portal de Fortinet.
+  </footer>
+</main>
+</body>
+</html>
